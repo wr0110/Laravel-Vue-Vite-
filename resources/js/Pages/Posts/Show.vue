@@ -2,9 +2,11 @@
 
   <Head :title="post.title" />
 
-  <div class="flex flex-wrap py-6">
-    <h1 class="text-3xl font-bold hover:text-gray-700 pb-4">{{ post.title }}</h1>
-    <p>{{ post.content }}</p>
+  <div class="flex sm:justify-center py-6">
+    <article class="w-full md:w-2/3">
+      <h1 class="text-3xl font-bold hover:text-gray-700 pb-4">{{ post.title }}</h1>
+      <p>{{ post.content }}</p>
+    </article>
   </div>
 </template>
 
