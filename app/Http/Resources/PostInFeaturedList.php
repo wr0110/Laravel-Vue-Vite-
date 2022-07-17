@@ -16,7 +16,7 @@ class PostInFeaturedList extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
+            'slug' => $this->slug,
             'title' => $this->title,
             'author' => new AuthorResource($this->author),
             'published_at_in_time_ago' => $this->published_at_in_time_ago,

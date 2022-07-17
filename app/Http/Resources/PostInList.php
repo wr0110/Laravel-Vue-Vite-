@@ -17,7 +17,7 @@ class PostInList extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
+            'slug' => $this->slug,
             'title' => $this->title,
             'content' => $this->truncated_content,
             'author' => new AuthorResource($this->author),

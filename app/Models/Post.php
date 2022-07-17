@@ -40,4 +40,9 @@ class Post extends Model
     {
         return $query->where('featured', true);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
