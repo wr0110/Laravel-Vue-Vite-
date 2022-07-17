@@ -13,4 +13,11 @@ class PostController extends Controller
             'featured_posts' => Post::featured()->orderBy('updated_at', 'desc')->limit(5)->get(),
         ]);
     }
+
+    public function show(Post $post)
+    {
+        return inertia('Posts/Show', [
+            'post' => $post,
+        ]);
+    }
 }

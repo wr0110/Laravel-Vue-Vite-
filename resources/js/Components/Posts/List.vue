@@ -2,13 +2,8 @@
   <ListItem v-for="item in items" :item="item" />
 </template>
 
-<script>
+<script setup>
 import ListItem from './ListItem.vue'
 
-export default {
-  components: { ListItem },
-  props: {
-    items: [Object],
-  }
-}
+defineProps({ items: [Object] })
 </script>
