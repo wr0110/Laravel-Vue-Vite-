@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import BreezeButton from '@/Components/Button.vue';
+import BreezeButton from '@/Components/Shared/Button.vue';
 import BreezeGuestLayout from '@/Layouts/Guest.vue';
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
 
