@@ -6,6 +6,9 @@
             </Link>
             <div class="flex items-center text-base leading-5">
                 <div class="hidden sm:block">
+                    <Link class="font-medium text-gray-900 sm:p-4" href="/posts/create" v-if="!!auth.user">
+                    Something to post?
+                    </Link>
                     <Link class="font-medium text-gray-900 sm:p-4" href="/login" v-if="!auth.user">Login</Link>
                     <Link class="font-medium text-gray-900 sm:p-4" href="/logout" method="POST" v-if="!!auth.user">
                     Logout
@@ -28,8 +31,15 @@
             </div>
         </header>
         <div class="sm:hidden flex flex-col divide-y divide-solid divide-y-1" v-if="isOpen">
-            <Link class="px-5 py-3 text-gray-900" href="/login">Login</Link>
-            <Link class="px-5 py-3 text-gray-900" href="/register">Register</Link>
+            <Link class="font-medium text-gray-900 sm:p-4" href="/posts/create" v-if="!!auth.user">
+            Something to post?
+            </Link>
+            <Link class="px-5 py-3 text-gray-900" href="/login" v-if="!auth.user">Login</Link>
+            <Link class="px-5 py-3 text-gray-900" href="/register" v-if="!auth.user">Register</Link>
+            <Link class="px-5 py-3 text-gray-900" href="/logout" method="POST" v-if="!!auth.user">
+            Logout
+            </Link>
+
         </div>
         <slot />
     </div>
